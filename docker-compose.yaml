@@ -1,0 +1,9 @@
+services:
+  db:
+    image: 'postgres:latest'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: go2climb
+    ports:
+      - '5432'
