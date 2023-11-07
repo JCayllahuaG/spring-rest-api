@@ -1,6 +1,7 @@
 package com.softtech.springrestapi.experience_design.domain.model.aggregates;
 
 import com.softtech.springrestapi.experience_design.domain.model.entities.Location;
+import com.softtech.springrestapi.experience_design.domain.model.valueobjects.records.AgencyDetails;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,13 +19,9 @@ public class Agency {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Embedded
+    private AgencyDetails agencyDetails;
 
     @ManyToOne
     private Manager manager;
-
-    @OneToOne
-    @JoinColumn(name = "location_id", referencedColumnName = "id")
-    private Location location;
-
-
 }

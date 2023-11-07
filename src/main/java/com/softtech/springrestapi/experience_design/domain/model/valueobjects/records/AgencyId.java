@@ -2,15 +2,15 @@ package com.softtech.springrestapi.experience_design.domain.model.valueobjects.r
 
 import jakarta.persistence.Embeddable;
 @Embeddable
-public record AgencyId(Long id)  {
+public record AgencyId(Long value)  {
     public AgencyId() {
         this(null);
     }
     public AgencyId{
-        if (id == null) {
+        if (value == null) {
             throw new IllegalArgumentException("Id cannot be null");
         }
-        if (id < 0) {
+        if (value < 0) {
             throw new IllegalArgumentException("Id cannot be negative");
         }
     }

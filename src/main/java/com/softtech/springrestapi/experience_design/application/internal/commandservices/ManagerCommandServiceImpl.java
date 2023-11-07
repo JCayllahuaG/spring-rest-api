@@ -4,10 +4,10 @@ import com.softtech.springrestapi.experience_design.domain.model.aggregates.Mana
 import com.softtech.springrestapi.experience_design.domain.model.commands.manager.CreateManagerCommand;
 import com.softtech.springrestapi.experience_design.domain.model.commands.manager.RemoveManagerCommand;
 import com.softtech.springrestapi.experience_design.domain.model.commands.manager.UpdateManagerInfoCommand;
-import com.softtech.springrestapi.experience_design.domain.services.commands.IManagerCommandService;
+import com.softtech.springrestapi.experience_design.domain.services.commands.ManagerCommandService;
 import com.softtech.springrestapi.experience_design.infraestructure.mapping.ManagerMapper;
-import com.softtech.springrestapi.experience_design.infraestructure.repositories.IManagerRepository;
-import com.softtech.springrestapi.experience_design.interfaces.rest.resources.ManagerResource;
+import com.softtech.springrestapi.experience_design.infraestructure.repositories.ManagerRepository;
+import com.softtech.springrestapi.experience_design.interfaces.rest.resources.manager.ManagerResource;
 import com.softtech.springrestapi.experience_design.interfaces.rest.transform.ManagerEntityFromCommand;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +15,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class ManagerCommandServiceImpl implements IManagerCommandService {
+public class ManagerCommandServiceImpl implements ManagerCommandService {
 
 
-    private final IManagerRepository managerRepository;
+    private final ManagerRepository managerRepository;
     @Autowired
     private ManagerMapper managerMapper;
 

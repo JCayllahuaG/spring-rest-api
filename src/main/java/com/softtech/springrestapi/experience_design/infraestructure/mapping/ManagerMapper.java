@@ -1,13 +1,10 @@
 package com.softtech.springrestapi.experience_design.infraestructure.mapping;
 
 import com.softtech.springrestapi.experience_design.domain.model.aggregates.Manager;
-import com.softtech.springrestapi.experience_design.domain.model.commands.manager.UpdateManagerInfoCommand;
-import com.softtech.springrestapi.experience_design.domain.model.valueobjects.records.Person;
-import com.softtech.springrestapi.experience_design.interfaces.rest.resources.CreateManagerResource;
-import com.softtech.springrestapi.experience_design.interfaces.rest.resources.ManagerResource;
-import com.softtech.springrestapi.experience_design.interfaces.rest.resources.UpdateManagerResource;
+import com.softtech.springrestapi.experience_design.interfaces.rest.resources.manager.CreateManagerResource;
+import com.softtech.springrestapi.experience_design.interfaces.rest.resources.manager.ManagerResource;
+import com.softtech.springrestapi.experience_design.interfaces.rest.resources.manager.UpdateManagerResource;
 import com.softtech.springrestapi.shared.mapping.EnhancedModelMapper;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;

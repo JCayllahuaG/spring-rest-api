@@ -1,4 +1,4 @@
-package com.softtech.springrestapi.experience_design.interfaces.rest.resources;
+package com.softtech.springrestapi.experience_design.interfaces.rest.resources.manager;
 
 import com.softtech.springrestapi.experience_design.domain.model.valueobjects.records.Person;
 import jakarta.persistence.Embedded;

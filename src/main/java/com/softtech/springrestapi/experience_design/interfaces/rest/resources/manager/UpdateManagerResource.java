@@ -1,7 +1,9 @@
-package com.softtech.springrestapi.experience_design.interfaces.rest.resources;
+package com.softtech.springrestapi.experience_design.interfaces.rest.resources.manager;
 
 import com.softtech.springrestapi.experience_design.domain.model.entities.Location;
+import com.softtech.springrestapi.experience_design.domain.model.valueobjects.classes.AgencyNetwork;
 import com.softtech.springrestapi.experience_design.domain.model.valueobjects.records.ManagerId;
+import com.softtech.springrestapi.experience_design.domain.model.valueobjects.records.Person;
 import jakarta.persistence.Embedded;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -9,19 +11,15 @@ import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-public class AgencyResource {
-
+public class UpdateManagerResource {
     @NotNull
     private Long id;
 
-    @NotNull
     @Embedded
-    private ManagerId managerId;
-
     @NotNull
+    private Person person;
+
     @Embedded
-    private Location location;
-
-
-
+    @NotNull
+    private AgencyNetwork agencyNetwork;
 }
