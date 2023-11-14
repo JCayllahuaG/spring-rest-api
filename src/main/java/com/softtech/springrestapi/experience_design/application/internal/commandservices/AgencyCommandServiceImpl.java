@@ -21,12 +21,6 @@ public class AgencyCommandServiceImpl implements AgencyCommandService {
 
     @Override
     public AgencyResource handle(CreateAgencyCommand command) {
-
-       boolean existAgencyWithName =   agencyRepository.existsByName(command.agencyDetails().name());
-
-
-
-
-
+        return new AgencyResource();
     }
 }
